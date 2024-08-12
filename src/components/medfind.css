@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+a {
+    text-decoration: none;
+}
+
+.accordion a {
+    text-decoration: none !important;
+}
+
+body {
+    height: calc(100% - 68px);
+    margin-top: 68px;
+}
+
+/* Navbar Styling */
+
+#nav {
+    height: 68px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #344e41;
+    padding: 16px 32px;
+    color: #ffffff;
+}
+
+#nav h2, #nav p {
+    color: #fefae0;
+}
+
+#nav p {
+    font-size: 16px;
+    line-height: 32px;
+    padding-top: 8px;
+}
+
+.nav-btn {
+    color: #fefae0;
+    width: 128px;
+    height: 42px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #606c38;
+    font-weight: 500;
+}
+
+#nav-links {
+    gap: 20%;
+}
+
+#nav-auth {
+    gap: 5%;
+}
+
+#nav-profile {
+    gap: 10%;
+}
+/* Search Page Styling */
+
+.search-div1 {
+    padding: 30px 0px;
+}
+
+.search-div1 h1 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    color: #101828;
+    text-align: center;
+}
+
+.search-div1 p {
+    margin: 0 auto;
+    max-width: 900px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #344e41;
+    text-align: center;
+}
+
+#search-div2 {
+    margin-bottom: 30px;
+}
+
+.search-div3 {
+    width: 160px;
+    height: 45px;
+    border-radius: 20px;
+}
+
+.search-div4 {
+    width: 262px;
+    height: 45px;
+    border-radius: 20px;
+}
+
+.custom-dropdown-menu {
+    max-height: 200px; 
+    overflow-y: auto;
+}
+
+.search-input {
+    width: 400px;
+    height: 45px;
+    border: 1px solid #198754;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #344e41;
+    padding: 10px; 
+}
+
+.search-input:focus {
+    outline: none;
+    border: 1px solid #606c38;
+}
+
+.search-btn {
+    color: #ffffff;
+    width: 128px;
+    height: 42px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #198754;
+    font-weight: 500; 
+}
+
+.input-search {
+    gap: 8px;
+}
+
+.hc-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.hc-card {
+    width: calc(20% - 20px);
+    height: 280px;
+    border: 1px solid #198754;
+    border-radius: 15px;
+    padding: 12px;
+}
+
+.hc-card h3 {
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -0.02em;
+    color: #101828;
+}
+
+.hc-card p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #344e41;
+}
+
+
+.page {
+    margin-top: 30px;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.page button {
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #fefae0;;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fefae0;
+    background-color: #606c38;
+}
+
+/* .page button:not([disabled]):hover {
+    background: #606c38;
+    color: #fefae0;
+} */
+
+.page button:disabled {
+    border: 1px solid #606c38;
+    color: #606c38;
+    background-color: #ffffff;
+}
+
+.btn-function {
+    display: block;
+    margin: 0 auto;
+    color: #fefae0;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #606c38;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+
+.footer-container {
+    height: 400px;
+    background: #283618;
+    padding: 80px 50px 40px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-div1 h2, .footer-div1 p, .footer-div2 p, .footer-div3 p {
+    color: #fefae0;
+}
+
+.footer-container h3 {
+    color: #ffffff;
+}
+
+.footer-div1 {
+    width: 33.33%;
+}
+.footer-div2 {
+    width: 20%;
+}
+.footer-div3 {
+    width: 20%;
+}
+
+.footer-div4 p{
+    color: #ffffff;
+    text-align: center;
+    padding-top: 70px;
+}
+
+/* Sign Up */
+
+#sign-up {
+    padding: 50px;
+}
+
+#sign-up input, #sign-up textarea {
+    display: block;
+    width: 450px;
+    height: 45px;
+    border: 1px solid #198754;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #344e41;
+    padding: 10px;
+    margin-bottom: 30px; 
+}
+
+#sign-up textarea {
+    height: 150px;
+}
+
+#sign-up input:focus, #sign-up textarea:focus {
+    outline: none;
+    border: 1px solid #606c38;
+}
+
+#sign-up button {
+    color: #fefae0;
+    width: 450px;
+    height: 45px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background-color: #606c38;
+    font-weight: 500;
+    margin-bottom: 30px; 
+}
+
+#sign-up h3{
+    padding-bottom: 30px;
+}
+
+/* About Us*/
+
+.div-about1 {
+    background-image: url(../assets/smiling-medical-team-standing-together-hospital-corridor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.div-about1 h1 {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 83px;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 110px;
+}
+
+.div-about1 p {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px; 
+    text-align: center;
+    color: #fefae0;
+    padding: 70px;
+}
+
+.div-about2 {
+    padding: 50px 120px; 
+}
+
+.div-about4 {
+    padding: 50px 120px 50px; 
+}
+
+
+.div-about2 h3,  .div-about4 h3 {
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -0.02em;
+    color: #101828;
+    text-align: center;
+}
+
+.div-about2 p, .div-about4 p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #344e41;
+    text-align: center;
+}
+
+.div-about3a {
+    width: 50%;
+    height: 330px;
+    background: #344e41;
+    padding: 50px 30px;
+}
+
+.div-about3a h3{
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -0.02em;
+    color: #fefae0;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.div-about3a p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.div-about3b {
+    width: 50%;
+    height: 330px;
+    background: #198754;
+    padding: 50px 30px;
+}
+
+.div-about3b h3{
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.div-about3b p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #fefae0;
+    text-align: center;
+}
+
+/* Home Page*/
+
+#hero {
+    width: 100%;
+    height: auto;
+    padding: 80px 100px;
+    gap: 50px;
+}
+
+.hero-img {
+    width: 573.8px;
+    height: 383px;
+    border-radius: 25px;
+}
+
+.hero-1 {
+    width: 45%;
+}
+
+.hero-1 h1 {
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 54px;
+    letter-spacing: -0.02em;
+    color: #101828;
+    padding-bottom: 20px;
+}
+
+.hero-1 p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #344e41;
+    padding-bottom: 20px;
+}
+
+.hero-btn {
+    color: #fefae0;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #606c38;
+    font-weight: 500;
+}
+
+.hero-2 {
+    width: 55%;
+}
+
+.div-home3 {
+    padding-bottom: 20px;
+}
+
+.div-home3a {
+    width: 50%;
+    height: 330px;
+    background: #344e41;
+    padding: 50px 30px;
+}
+
+.div-home3a h3{
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -0.02em;
+    color: #fefae0;
+    padding-bottom: 20px;
+}
+
+.div-home3a p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+    padding-bottom: 20px;
+}
+
+.div-home3b {
+    width: 50%;
+    height: 330px;
+    background: #198754;
+    padding: 50px 30px;
+}
+
+.div-home3b h3{
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    padding-bottom: 20px;
+}
+
+.div-home3b p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #fefae0;
+    padding-bottom: 20px;
+}
+
+.faq-container {
+    width: 900px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.faq-container h1 {
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -0.02em;
+    color: #101828;
+    text-align: center;
+    padding-bottom: 20px;
+}
