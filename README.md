@@ -1,4 +1,4 @@
-# Altschool Frontend Second Semester Examination Project
+# Altschool Capstone Project
 
 This is a web application solution that allows our users to find hospitals and medical centers around their location, and also allow them to add new entries to our lists.
 
