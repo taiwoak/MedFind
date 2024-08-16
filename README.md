@@ -9,8 +9,9 @@ This is a web application solution that allows our users to find hospitals and m
 - [Overview](#overview)
   - [Project Requirements](#project-requirements)
   - [Pages](#pages)
-- [Process](#process)
-  - [Technology Used](#technology-used)
+- [Technology](#process)
+  - [Frontend](#frontend)
+  - [Backend](#backend)
 - [How to run this on your Local PC](#how-to-run-this-on-your-local-pc)
 
 
@@ -66,12 +67,16 @@ This page is where our registered users log in
 This page is where our prospective users onboards and sign up.
 
 
-## Process
-### Technology Used
+## Technology
+### Frontend
 
-Frontend - React, Typescript and Bootstrap
-Baackend - Firebase
+React
+TypeScript
+Bootstrap
 
+### Backend
+
+Firebase
 
 ## How to run this on your Local PC:
 To run this on your Local PC is pretty straightforward. Execute the following steps:
