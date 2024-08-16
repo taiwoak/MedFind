@@ -1,46 +1,80 @@
-# Getting Started with Create React App
+# Altschool Frontend Second Semester Examination Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web application solution that allows our users to find hospitals and medical centers around their location, and also allow them to add new entries to our lists.
 
-## Available Scripts
+![alt text](image.png)
 
-In the project directory, you can run:
+## Table of contents
 
-### `npm start`
+- [Overview](#overview)
+  - [Project Requirements](#project-requirements)
+  - [Pages](#pages)
+- [Process](#process)
+  - [Technology Used](#technology-used)
+- [How to run this on your Local PC](#how-to-run-this-on-your-local-pc)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Overview
 
-### `npm test`
+### Project Requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Users should be able to search, export, share their lists either with email or link sharing functionality and add new centers.
 
-### `npm run build`
+Users can either be Authenticated or Unauthenticated
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Authenticated Users can explore all the features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Unauthenticated Users can only search for lists, export and share the link while they have to be authenticated to add new centers or share via email.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Pages
+There are 7 pages implemented on this Project: Home Page, About Page, Contact Page, Search Page, Log In Page, Sign Up Page, Profile Page
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Home Page: 
+The home page has a navigation bar, hero section, contents on search and add new centers functionalities, FAQs and footer section.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### About Page: 
+This page contains more detailed information about the company and what the web app solution provides.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Contact Page: 
+This page contains a form that our users can use to pass their message/feedback to us
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Search Page: 
+The page contains the following functionalities:
 
-## Learn More
+Search for any hospital or health center of your choice by name
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Search for hospitals or health centers by state
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Search for hospitals or health centers by categories
+
+Pagination to move between previous and next page
+
+Export to CSV functionality
+
+Share by Email functionality
+
+Share by Link functionality
+
+### Profile Page: 
+This page contains a form that authenticated users can use to add new entries for hospitals or health centers around their location.
+
+### Log In Page: 
+This page is where our registered users log in
+
+### Sign Up Page: 
+This page is where our prospective users onboards and sign up.
+
+
+## Process
+### Technology Used
+
+Frontend - React, Typescript and Bootstrap
+Baackend - Firebase
+
+
+## How to run this on your Local PC:
+To run this on your Local PC is pretty straightforward. Execute the following steps:
+1. Clone this repo
+2. Navigate to the path and run `npm install` on your terminal to install all dependencies
+3. Run `npm start` and feel the magic.
