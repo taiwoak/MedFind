@@ -12,6 +12,7 @@ This is a web application solution that allows our users to find hospitals and m
 - [Technology](#process)
   - [Frontend](#frontend)
   - [Backend](#backend)
+  - [API](#api)
 - [How to run this on your Local PC](#how-to-run-this-on-your-local-pc)
 
 
@@ -77,6 +78,10 @@ Bootstrap
 ### Backend
 
 Firebase
+
+### API
+
+The API implemented on this project is the Humanitarian Data Exchange API on Nigeria Health Facilities that provides the list of hospitals and health centers within Nigeria.
 
 ## How to run this on your Local PC:
 To run this on your Local PC is pretty straightforward. Execute the following steps:
