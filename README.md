@@ -1,4 +1,4 @@
-# Altschool Capstone Project
+# MedFind
 
 This is a web application solution that allows our users to find hospitals and medical centers around their location, and also allow them to add new entries to our lists.
 
