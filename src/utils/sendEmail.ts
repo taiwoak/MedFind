@@ -18,14 +18,33 @@ export const sendEmail = async (
     return;
   }
 
-  const tableHeader = 'S/N | Name | Category | Address\n';
-  const tableRows = results
-    .map((center, index) => {
-      return `${index + 1} | ${center.name} | ${center.category} | ${center.address}`;
-    })
-    .join('\n');
+  const tableRows = results.map((center, index) => {
+  return `
+    <tr>
+      <td>${index + 1}</td>
+      <td>${center.name}</td>
+      <td>${center.category}</td>
+      <td>${center.address}</td>
+    </tr>
+  `;
+}).join('');
 
-  const message = `Here are your search results for health centers:\n\n${tableHeader}${tableRows}`;
+const message = `
+  <p>Here are your search results for health centers:</p>
+  <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th>S/N</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${tableRows}
+    </tbody>
+  </table>
+`;
 
   const templateParams = {
     subject,

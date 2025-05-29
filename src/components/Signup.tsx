@@ -11,8 +11,13 @@ const Signup: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Signup button clicked');
+    console.log('Email:', email);
+    console.log('Password:', password ? '•••••••' : '(empty)');
     try {
+      console.log('Attempting signup...');
       await createUserWithEmailAndPassword(auth, email, password);
+      console.log('Signup successful');
       navigate('/login'); // Redirect to Login page after successful signup
     } catch (error) {
       if (error instanceof Error) {
