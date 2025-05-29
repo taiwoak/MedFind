@@ -10,8 +10,13 @@ const Login: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Login button clicked');
+    console.log('Email:', email);
+    console.log('Password:', password ? '•••••••' : '(empty)');
     try {
+      console.log('Attempting login...');
       await signInWithEmailAndPassword(auth, email, password);
+      console.log('Login successful');
       navigate('/profile'); // Redirect to Add Health Center page after login
     } catch (error) {
       if (error instanceof Error) {
