@@ -35,7 +35,6 @@ const SearchHealthCenters: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Load from query string on mount
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const initialSearchName = params.get('searchName') || '';
@@ -47,7 +46,6 @@ const SearchHealthCenters: React.FC = () => {
     setState(initialState);
   }, [location.search]);
 
-  // Fetch health center data once
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -60,7 +58,6 @@ const SearchHealthCenters: React.FC = () => {
     fetchData();
   }, []);
 
-  // Filter based on current state
   useEffect(() => {
     const filtered = healthCenters.filter(center =>
       (searchName ? center.name.toLowerCase().includes(searchName.toLowerCase()) : true) &&
@@ -68,9 +65,11 @@ const SearchHealthCenters: React.FC = () => {
       (state ? center.address.includes(state) : true)
     );
     setResults(filtered);
+    setCurrentPage(1); // Reset to first page when filters change
   }, [searchName, category, state, healthCenters]);
 
   const paginatedResults = results.slice((currentPage - 1) * resultsPerPage, currentPage * resultsPerPage);
+  const totalPages = Math.ceil(results.length / resultsPerPage);
 
   const handlePageChange = (page: number) => setCurrentPage(page);
 
@@ -129,10 +128,25 @@ const SearchHealthCenters: React.FC = () => {
         ))}
       </div>
 
-      <div className='d-flex flex-row align-items-center justify-content-center page'>
-        <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>Prev</button>
-        <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === Math.ceil(results.length / resultsPerPage)}>Next</button>
-      </div>
+      {results.length > 0 && (
+        <div className='d-flex flex-column align-items-center justify-content-center page'>
+          <p>Showing page {currentPage} out of {totalPages}</p>
+          <div className='d-flex flex-row align-items-center justify-content-center page-btn'>
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              Prev
+            </button>
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      )}
 
       <button onClick={handleExport} className='btn-function'>Export to CSV</button>
       <EmailShareButton results={results} />

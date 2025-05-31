@@ -169,6 +169,10 @@ body {
     margin-bottom: 30px;
 }
 
+.page-btn {
+    gap: 16px;
+}
+
 .page button {
     width: 120px;
     height: 40px;
@@ -209,9 +213,8 @@ body {
 /* Footer */
 
 .footer-container {
-    height: 400px;
     background: #283618;
-    padding: 80px 50px 40px;
+    padding: 60px 50px 40px;
     position: relative;
     left: 0;
     bottom: 0;

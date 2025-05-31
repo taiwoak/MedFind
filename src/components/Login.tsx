@@ -17,7 +17,7 @@ const Login: React.FC = () => {
       console.log('Attempting login...');
       await signInWithEmailAndPassword(auth, email, password);
       console.log('Login successful');
-      navigate('/search'); // Redirect to Add Health Center page after login
+      navigate('/profile'); // Redirect to Add Health Center page after login
     } catch (error) {
       if (error instanceof Error) {
         console.error(error.message);
