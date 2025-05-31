@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import fetchHealthCenters from '../utils/fetchHealthCenters';
 import exportToCSV from '../utils/exportToCSV';
@@ -31,6 +32,22 @@ const SearchHealthCenters: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const resultsPerPage = 30;
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Load from query string on mount
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const initialSearchName = params.get('searchName') || '';
+    const initialCategory = params.get('category') || '';
+    const initialState = params.get('state') || '';
+
+    setSearchName(initialSearchName);
+    setCategory(initialCategory);
+    setState(initialState);
+  }, [location.search]);
+
+  // Fetch health center data once
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -43,35 +60,25 @@ const SearchHealthCenters: React.FC = () => {
     fetchData();
   }, []);
 
+  // Filter based on current state
   useEffect(() => {
-    const filterResults = () => {
-      const filtered = healthCenters.filter(center =>
-        (searchName ? center.name.toLowerCase().includes(searchName.toLowerCase()) : true) &&
-        (category ? center.category === category : true) &&
-        (state ? center.address.includes(state) : true)
-      );
-      setResults(filtered);
-    };
-    filterResults();
-  }, [searchName, category, state, healthCenters]);
-
-  const paginatedResults = results.slice((currentPage - 1) * resultsPerPage, currentPage * resultsPerPage);
-
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-  };
-
-  const handleExport = () => {
-    exportToCSV(results, 'health_centers.csv');
-  };
-
-  const handleSearch = () => {
     const filtered = healthCenters.filter(center =>
       (searchName ? center.name.toLowerCase().includes(searchName.toLowerCase()) : true) &&
       (category ? center.category === category : true) &&
       (state ? center.address.includes(state) : true)
     );
     setResults(filtered);
+  }, [searchName, category, state, healthCenters]);
+
+  const paginatedResults = results.slice((currentPage - 1) * resultsPerPage, currentPage * resultsPerPage);
+
+  const handlePageChange = (page: number) => setCurrentPage(page);
+
+  const handleExport = () => exportToCSV(results, 'health_centers.csv');
+
+  const handleSearch = () => {
+    const query = new URLSearchParams({ searchName, category, state });
+    navigate({ search: query.toString() });
   };
 
   return (
@@ -85,10 +92,8 @@ const SearchHealthCenters: React.FC = () => {
         <Dropdown>
           <Dropdown.Toggle variant="success" className='search-div3'>State</Dropdown.Toggle>
           <Dropdown.Menu className="custom-dropdown-menu">
-            {states.map((state) => (
-              <Dropdown.Item key={state} onClick={() => setState(state)}>
-                {state}
-              </Dropdown.Item>
+            {states.map((s) => (
+              <Dropdown.Item key={s} onClick={() => setState(s)}>{s}</Dropdown.Item>
             ))}
           </Dropdown.Menu>
         </Dropdown>
@@ -97,9 +102,7 @@ const SearchHealthCenters: React.FC = () => {
           <Dropdown.Toggle variant="success" className='search-div4'>Category</Dropdown.Toggle>
           <Dropdown.Menu className="custom-dropdown-menu">
             {categories.map((cat) => (
-              <Dropdown.Item key={cat} onClick={() => setCategory(cat)}>
-                {cat}
-              </Dropdown.Item>
+              <Dropdown.Item key={cat} onClick={() => setCategory(cat)}>{cat}</Dropdown.Item>
             ))}
           </Dropdown.Menu>
         </Dropdown>

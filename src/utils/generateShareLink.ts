@@ -1,6 +1,5 @@
-export const generateShareLink = (params: any) => {
-    const baseUrl = window.location.href;
-    const queryString = new URLSearchParams(params).toString();
-    return `${baseUrl}?${queryString}`;
-  };
-  
+export const generateShareLink = (params: Record<string, string>) => {
+  const baseUrl = `${window.location.origin}/search`;
+  const queryString = new URLSearchParams(params).toString();
+  return `${baseUrl}?${queryString}`;
+};

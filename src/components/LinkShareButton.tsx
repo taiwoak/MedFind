@@ -1,8 +1,8 @@
 import React from 'react';
 import { generateShareLink } from '../utils/generateShareLink';
-import './medfind.css'
+import './medfind.css';
 
-const LinkShareButton: React.FC<{ searchParams: any }> = ({ searchParams }) => {
+const LinkShareButton: React.FC<{ searchParams: Record<string, string> }> = ({ searchParams }) => {
   const handleClick = () => {
     const shareLink = generateShareLink(searchParams);
     navigator.clipboard.writeText(shareLink);
