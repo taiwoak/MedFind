@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaEnvelope, FaPhone } from 'react-icons/fa6';
 import './medfind.css'
 import { auth } from '../firebase';
 import { onAuthStateChanged } from 'firebase/auth';
@@ -22,8 +23,8 @@ const Footer: React.FC = () => {
         <div className='footer-div1'>
         <Link to ="/"><h2>MED<span style={{ color: '#ffffff' }}>FIND</span></h2></Link>
         <p>Bringing Healthcare Closer to You. Discover and explore nearby health centers across all categories, and contribute by adding new hospitals to our growing community.</p>
-        <Link to='mailto:taiwoakerele98@gmail.com'><p style={{ color: '#ffffff' }}>Mail: taiwoakerele98@gmail.com</p></Link>
-        <Link to="tel:+2349032562302"><p style={{ color: '#ffffff' }}>Call: +234-903-256-2302</p></Link>
+        <Link to='mailto:taiwoakerele98@gmail.com'><p style={{ color: '#ffffff' }}>{FaEnvelope({})} taiwoakerele98@gmail.com</p></Link>
+        <Link to="tel:+2349032562302"><p style={{ color: '#ffffff' }}>{FaPhone({})} +234-903-256-2302</p></Link>
         </div>
         <div className='footer-div2'>
           <h3>Services</h3>

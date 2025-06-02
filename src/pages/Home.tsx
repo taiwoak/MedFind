@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../components/medfind.css';
 import hero from '../assets/front-view-black-nurses-work.jpg';
+import hospitalsearch from '../assets/pin.png';
+import hospitaladd from '../assets/hospital.png';
 import Accordion from 'react-bootstrap/Accordion';
 
 
@@ -20,11 +22,13 @@ const Home: React.FC = () => {
         </div>
         <div className='d-flex flex-row align-items-center justify-content-center div-home3'>
         <div className='div-home3a'>
+          <img src={hospitalsearch} alt="Hospital Search" className='search-img' />
           <h3>Hospital Search</h3>
           <p>Easily find hospitals and health centers near you with our comprehensive search tool. Whether you need a specialist or general care, locate the best facilities quickly and efficiently.</p>
           <Link to="/search"><button className='nav-btn'>Continue</button></Link>
         </div>
         <div className='div-home3b'>
+          <img src={hospitaladd} alt="Add Hospitals" className='search-img' />
           <h3>Add Health Centers Around You</h3>
           <p>Contribute to the community by adding local health centers. Help others find quality care by sharing information about nearby hospitals and clinics</p>
           <Link to="/signup"><button className='nav-btn'>Continue</button></Link>
@@ -61,6 +65,12 @@ const Home: React.FC = () => {
             <Accordion.Header>How accurate is the information on MedFind?</Accordion.Header>
             <Accordion.Body>
               We strive to keep our database as accurate as possible by regularly updating it with new information. Users can also contribute by adding or editing health centers, helping us maintain high-quality data.
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="5">
+            <Accordion.Header>Is MedFind only available in Nigeria?</Accordion.Header>
+            <Accordion.Body>
+              Yes, it is only available in Nigeria at the moment.
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>

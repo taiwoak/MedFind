@@ -1,4 +1,6 @@
 import React from 'react';
+import choice from '../assets/choice.png';
+import community from '../assets/community.png';
 
 const About: React.FC = () => {
   return (
@@ -15,10 +17,12 @@ const About: React.FC = () => {
       </div>
       <div className='d-flex flex-row align-items-center justify-content-center div-about3'>
         <div className='div-about3a'>
+          <img src={choice} alt="Hospital Choice" className='about-img' />
           <h3>Your Health, Your Choice</h3>
           <p>With MedFind, you have the power to choose the best healthcare option that suits your needs. Our extensive database covers a wide range of categories, ensuring that you find the right health center close to you, no matter where you are in Nigeria.</p>
         </div>
         <div className='div-about3b'>
+          <img src={community} alt="Hospital Community" className='about-img' />
           <h3>Community Driven</h3>
           <p>We're more than just a search tool. MedFind empowers users to contribute by adding new health centers to our database. This community-driven approach ensures that our platform stays updated with the latest information, helping others find the care they need. Together, we can build a comprehensive and reliable healthcare directory that serves everyone.</p>
         </div>

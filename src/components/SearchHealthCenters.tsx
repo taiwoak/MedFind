@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { FaHospital, FaLocationDot } from "react-icons/fa6";
 import Dropdown from 'react-bootstrap/Dropdown';
 import fetchHealthCenters from '../utils/fetchHealthCenters';
 import exportToCSV from '../utils/exportToCSV';
@@ -122,8 +123,8 @@ const SearchHealthCenters: React.FC = () => {
         {paginatedResults.map((center, index) => (
           <div key={index} className='hc-card'>
             <h3>{center.name}</h3>
-            <p>{center.category}</p>
-            <p>{center.address}</p>
+            <p>{FaHospital({})} {center.category}</p>
+            <p>{FaLocationDot({})} {center.address}</p>
           </div>
         ))}
       </div>
