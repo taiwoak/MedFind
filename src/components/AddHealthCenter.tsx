@@ -32,7 +32,9 @@ const AddHealthCenter: React.FC = () => {
         await addDoc(healthCentersRef, {
           name,
           address,
-          category
+          category,
+          createdBy: user.uid,
+          createdAt: new Date()
         });
 
         // Clear the form fields
