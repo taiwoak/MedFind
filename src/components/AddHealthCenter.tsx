@@ -11,6 +11,30 @@ const AddHealthCenter: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
 
+  const categoryOptions = [
+    'Community Health Center',
+    'Comprehensive Health Center',
+    'Cottage Hospital',
+    'Dispensary',
+    'District Hospital',
+    'Educational Clinic',
+    'Federal Medical Center',
+    'Federal Staff Clinic',
+    'General Hospital',
+    'Laboratory',
+    'Maternity Home',
+    'Medical Center',
+    'Military and Paramilitary Clinic',
+    'Pharmacy',
+    'Primary Health Center',
+    'Private Non-Profit',
+    'Research Hospital',
+    'Specialist Hospital',
+    'Teaching Hospital',
+    'Veterinary Clinic',
+    'Others'
+  ];
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setUser(user);
@@ -25,10 +49,8 @@ const AddHealthCenter: React.FC = () => {
 
     if (user) {
       try {
-        // Reference to the Firestore collection
         const healthCentersRef = collection(firestore, 'healthCenters');
 
-        // Add a new document with the input values
         await addDoc(healthCentersRef, {
           name,
           address,
@@ -37,12 +59,10 @@ const AddHealthCenter: React.FC = () => {
           createdAt: new Date()
         });
 
-        // Clear the form fields
         setName('');
         setAddress('');
         setCategory('');
         setSuccess('Health center added successfully!');
-
       } catch (error) {
         console.error('Error adding document:', error);
         setError('Failed to add health center. Please try again.');
@@ -70,13 +90,18 @@ const AddHealthCenter: React.FC = () => {
           onChange={(e) => setAddress(e.target.value)}
           required
         />
-        <input
-          type="text"
-          placeholder="Category"
+        <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
           required
-        />
+        >
+          <option value="">Select Category</option>
+          {categoryOptions.map((option, idx) => (
+            <option key={idx} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
         <button type="submit">Add Health Center</button>
       </form>
 

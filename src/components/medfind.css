@@ -260,7 +260,7 @@ body {
     padding: 50px;
 }
 
-#sign-up input, #sign-up textarea {
+#sign-up input, #sign-up select, #sign-up textarea {
     display: block;
     width: 450px;
     height: 45px;
@@ -278,7 +278,7 @@ body {
     height: 150px;
 }
 
-#sign-up input:focus, #sign-up textarea:focus {
+#sign-up input:focus, #sign-up select:focus, #sign-up textarea:focus {
     outline: none;
     border: 1px solid #606c38;
 }
