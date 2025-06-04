@@ -11,11 +11,13 @@ import Signup from './pages/UserSignup';
 import NewHealthCenter from './pages/NewHealthCenter';
 import RouteTitleHandler from './components/RouteTitleHandler';
 import MeetTheTeam from './pages/MeetTheTeam';
+import ScrollToTop from './components/ScrollToTop';
 
 
 const App: React.FC = () =>  {
   return (<BrowserRouter>
     <RouteTitleHandler />
+    <ScrollToTop />
     <main>
       <Navbar />
       <Routes>
