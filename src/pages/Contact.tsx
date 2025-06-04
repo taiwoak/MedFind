@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className='d-flex flex-column align-items-center justify-content-center' id='sign-up'>
-      <h3>CONTACT US TODAY!</h3>
+      <h3>CONTACT <span style={{ color: '#344e41' }}>MEDFIND</span></h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

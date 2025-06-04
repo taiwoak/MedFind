@@ -9,10 +9,13 @@ import Contact from './pages/Contact';
 import Login from './pages/UserLogin';
 import Signup from './pages/UserSignup';
 import NewHealthCenter from './pages/NewHealthCenter';
+import RouteTitleHandler from './components/RouteTitleHandler';
+import MeetTheTeam from './pages/MeetTheTeam';
 
 
 const App: React.FC = () =>  {
   return (<BrowserRouter>
+    <RouteTitleHandler />
     <main>
       <Navbar />
       <Routes>
@@ -23,6 +26,7 @@ const App: React.FC = () =>  {
         <Route path='/login' element={<Login/>}  />
         <Route path='/signup' element={<Signup/>}  />
         <Route path='/profile' element={<NewHealthCenter/>}  />
+        <Route path='/meet-the-team' element={<MeetTheTeam />} />
       </Routes>
       <Footer />
     </main>

@@ -464,6 +464,7 @@ body {
 
 .div-home3a {
     width: 50%;
+    height: 410px;
     background: #344e41;
     padding: 30px 30px;
 }
@@ -490,6 +491,7 @@ body {
 
 .div-home3b {
     width: 50%;
+    height: 410px;
     background: #198754;
     padding: 30px 30px;
 }
@@ -522,4 +524,44 @@ body {
     color: #101828;
     text-align: center;
     padding-bottom: 20px;
+}
+
+/* Meet The Team */
+
+.team-1 {
+    width: 55%;
+}
+
+.team-1 h1 {
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 68px;
+    color: #101828;
+    padding-bottom: 20px;
+}
+
+.team-1 p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #101828;
+}
+
+.media {
+    gap: 16px;
+}
+
+.media p {
+    color: #344e41;
+    font-size: 24px;
+}
+
+.team-2 {
+    width: 45%;
+}
+
+.taiwo-img {
+    width: 463.3px;
+    height: 495.4px;
+    border-radius: 25px;
 }

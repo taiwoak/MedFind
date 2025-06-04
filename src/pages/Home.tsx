@@ -64,6 +64,7 @@ const Home: React.FC = () => {
           <Accordion.Item eventKey="4">
             <Accordion.Header>How accurate is the information on MedFind?</Accordion.Header>
             <Accordion.Body>
+              This data is retrieved from the Humanitarian Data Exchange Database on Nigeria Health Facilities that provides the list of hospitals and health centers within Nigeria.
               We strive to keep our database as accurate as possible by regularly updating it with new information. Users can also contribute by adding or editing health centers, helping us maintain high-quality data.
             </Accordion.Body>
           </Accordion.Item>

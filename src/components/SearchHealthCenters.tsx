@@ -12,9 +12,9 @@ const categories = [
   "Community Health Center", "Comprehensive Health Center", "Cottage Hospital",
   "Dispensary", "District Hospital", "Educational Clinic", "Federal Medical Center",
   "Federal Staff Clinic", "General Hospital", "Laboratory", "Maternity Home",
-  "Medical Center", "Military and Paramilitary Clinic", "Others", "Pharmacy",
+  "Medical Center", "Military and Paramilitary Clinic", "Pharmacy",
   "Primary Health Center", "Private Non-Profit", "Research Hospital", "Specialist Hospital",
-  "Teaching Hospital", "Veterinary Clinic"
+  "Teaching Hospital", "Veterinary Clinic", "Others"
 ];
 
 const states = [
