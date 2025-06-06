@@ -74,7 +74,13 @@ const SearchHealthCenters: React.FC = () => {
 
   const handlePageChange = (page: number) => setCurrentPage(page);
 
-  const handleExport = () => exportToCSV(results, 'health_centers.csv');
+  const handleExport = () => {
+    if (!results || results.length === 0) {
+      alert('You can not export empty results to CSV');
+      return;
+    }
+    exportToCSV(results, 'health_centers.csv');
+  }
 
   const handleSearch = () => {
     const query = new URLSearchParams({ searchName, category, state });

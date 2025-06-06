@@ -29,6 +29,11 @@ export const sendEmail = async (
   `;
 }).join('');
 
+if (!results || results.length === 0) {
+  alert('You can not share empty results via Email');
+  return;
+}
+
 const message = `
   <p>Here are your search results for health centers:</p>
   <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse;">
@@ -70,6 +75,7 @@ const message = `
     })
     .catch((error) => {
       console.error('Email send failed:', error);
-      alert('The data is above limit!');
+      alert('The email could not be sent because the results are too large.\n' +
+    'If your search result spans more than 10 pages, kindly use the "Export to CSV" option instead.');
     });
 };

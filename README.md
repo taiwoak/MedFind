@@ -1,90 +1,72 @@
-# MedFind
+# 🏥 MedFind
 
-This is a web application solution that allows our users to find hospitals and medical centers around their location, and also allow them to add new entries to our lists.
+**MedFind** is a digital platform that empowers users across Nigeria to **discover, share, and contribute** to a growing database of hospitals and health centers — based on proximity, category, or specific criteria.
+
+Whether you're a patient, caregiver, NGO, or researcher, MedFind simplifies how you access vital healthcare information.
 
 ![alt text](image.png)
 
-## Table of contents
+---
 
-- [Overview](#overview)
-  - [Project Requirements](#project-requirements)
-  - [Pages](#pages)
-- [Technology](#process)
-  - [Frontend](#frontend)
-  - [Backend](#backend)
-  - [API](#api)
-- [How to run this on your Local PC](#how-to-run-this-on-your-local-pc)
+## 🔍 Core Features
 
+- **Search** for hospitals and health centers by name, state, or category  
+- **Export** search results to CSV for reporting and offline use  
+- **Share** results via secure email or public link  
+- **Add** new health facilities (authenticated users only)  
+- **Responsive interface** accessible across desktop and mobile devices
 
-## Overview
+---
 
-### Project Requirements
+## 👤 Access Levels
 
-Users should be able to search, export, share their lists either with email or link sharing functionality and add new centers.
+| User Type          | Capabilities                                                                 |
+|--------------------|------------------------------------------------------------------------------|
+| Guest              | Search, Export to CSV, Share via link                                        |
+| Authenticated User | All of the above + Add new centers, Share via Email                         |
 
-Users can either be Authenticated or Unauthenticated
+---
 
-Authenticated Users can explore all the features
+## 🔄 User Flow
 
-Unauthenticated Users can only search for lists, export and share the link while they have to be authenticated to add new centers or share via email.
+1. Users land on the homepage and can immediately start searching.
+2. For advanced features like email sharing or submitting new centers, users are prompted to log in or sign up.
+3. Upon successful search, users can paginate, export, or share the results.
+4. Authenticated users contribute to data accuracy by adding new or missing centers.
 
+---
 
-### Pages
-There are 7 pages implemented on this Project: Home Page, About Page, Contact Page, Search Page, Log In Page, Sign Up Page, Profile Page
+## 🧭 Navigation Overview
 
-### Home Page: 
-The home page has a navigation bar, hero section, contents on search and add new centers functionalities, FAQs and footer section.
+- **Home**: Introduction to MedFind and core call-to-actions  
+- **Search**: Access the health center database with filters and actions  
+- **Add New Center**: Submit new facilities (authenticated users)  
+- **Contact**: Share feedback or inquiries  
+- **About**: Learn more about MedFind’s mission and foundation  
+- **FAQ**: Common questions answered for users and contributors  
 
-### About Page: 
-This page contains more detailed information about the company and what the web app solution provides.
+---
 
-### Contact Page: 
-This page contains a form that our users can use to pass their message/feedback to us
+## 📊 Data Source
 
-### Search Page: 
-The page contains the following functionalities:
+All health facility data on MedFind is sourced from the **[Humanitarian Data Exchange (HDX)](https://data.humdata.org/dataset/nigeria-health-facilities)** under their open data license.  
+We thank the HDX team and contributing agencies for their ongoing commitment to transparency and accessibility in global health.
 
-Search for any hospital or health center of your choice by name
+---
 
-Search for hospitals or health centers by state
+## 🔒 Security & Privacy
 
-Search for hospitals or health centers by categories
+User authentication is powered by secure backend services. We do not store or share personal user data outside of authentication requirements. Email addresses used for sharing results are not retained.
 
-Pagination to move between previous and next page
+---
 
-Export to CSV functionality
+## ⚠️ Limitations
 
-Share by Email functionality
+- Email sharing is restricted to results under 50kb (typically 10 pages max) due to third-party service constraints.  
+  For larger datasets, please use the **Export to CSV** option.
 
-Share by Link functionality
+---
 
-### Profile Page: 
-This page contains a form that authenticated users can use to add new entries for hospitals or health centers around their location.
+## 💬 Support & Contact
 
-### Log In Page: 
-This page is where our registered users log in
-
-### Sign Up Page: 
-This page is where our prospective users onboards and sign up.
-
-
-## Technology
-### Frontend
-
-React
-TypeScript
-Bootstrap
-
-### Backend
-
-Firebase
-
-### API
-
-The API implemented on this project is the Humanitarian Data Exchange API on Nigeria Health Facilities that provides the list of hospitals and health centers within Nigeria.
-
-## How to run this on your Local PC:
-To run this on your Local PC is pretty straightforward. Execute the following steps:
-1. Clone this repo
-2. Navigate to the path and run `npm install` on your terminal to install all dependencies
-3. Run `npm start` and feel the magic.
+For inquiries, feedback, or support, please visit the [Contact Page](https://med-find.vercel.app/contact) or reach out via email to Taiwo at **taiwoakerele98@gmail.com**.
