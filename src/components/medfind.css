@@ -110,7 +110,7 @@ body {
         top: 0;
         right: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         z-index: 99;
         background-color: #344e41;
     }
@@ -318,7 +318,7 @@ body {
 /* Footer */
 
 .footer-container {
-    background: #283618;
+    background-color: #283618;
     padding: 60px 50px 30px;
     position: relative;
     left: 0;
@@ -373,6 +373,10 @@ body {
 
     .footer-div1, .footer-div2, .footer-div3 {
         width: 100%;
+    }
+
+    .footer-div1 h2 {
+        font-size: 24px;
     }
 
     .footer-div4 {
@@ -755,13 +759,14 @@ body {
 
     .faq-container {
         width: 90%;
+        padding-bottom: 48px;
     }
 
     .div-home3 {
         display: flex;
         flex-direction: column;
         padding-bottom: 24px;
-        margin-bottom: 35px;
+        margin-bottom: 24px;
     }
 
     .div-home3a, .div-home3b {
