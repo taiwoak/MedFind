@@ -324,6 +324,7 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
+    height: auto;
 }
 
 .footer-div {
@@ -759,7 +760,7 @@ body {
     .div-home3 {
         display: flex;
         flex-direction: column;
-        padding-bottom: 20px;
+        padding-bottom: 24px;
         margin-bottom: 35px;
     }
 
@@ -790,6 +791,7 @@ body {
         width: 120px;
         height: 40px;
         font-size: 14px;
+        margin-bottom: 8px;
     }
 
 }
