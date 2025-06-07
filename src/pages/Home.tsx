@@ -10,7 +10,7 @@ import Accordion from 'react-bootstrap/Accordion';
 const Home: React.FC = () => {
   return (
     <div>
-        <div className='d-flex flex-row align-items-center justify-content-around' id='hero'>
+        <div id='hero'>
           <div className='hero-1'>
             <h1>Looking for Hospitals or Health Centers in your area?</h1>
             <p>We provide you access and visibility to a whole list of medical centers around you. You can join our ever-growing community by contributing to our list. <Link to='/about' style={{ color: '#198754' }}>Learn more about us</Link></p>
@@ -20,7 +20,7 @@ const Home: React.FC = () => {
             <img src={hero} alt="Nurses" className='hero-img' />
           </div>
         </div>
-        <div className='d-flex flex-row align-items-center justify-content-center div-home3'>
+        <div className='div-home3'>
         <div className='div-home3a'>
           <img src={hospitalsearch} alt="Hospital Search" className='search-img' />
           <h3>Hospital Search</h3>
@@ -64,7 +64,7 @@ const Home: React.FC = () => {
           <Accordion.Item eventKey="4">
             <Accordion.Header>How accurate is the information on MedFind?</Accordion.Header>
             <Accordion.Body>
-              This data is retrieved from the <a href="https://data.humdata.org/dataset/nigeria-health-facilities" target='_blank'>Humanitarian Data Exchange Dataset on Nigeria Health Facilities</a> that provides the list of hospitals and health centers within Nigeria.
+              This data is retrieved from the <a href="https://data.humdata.org/dataset/nigeria-health-facilities" target='_blank' rel="noreferrer">Humanitarian Data Exchange Dataset on Nigeria Health Facilities</a> that provides the list of hospitals and health centers within Nigeria.
               We strive to keep our database as accurate as possible by regularly updating it with new information. Users can also contribute by adding or editing health centers, helping us maintain high-quality data.
             </Accordion.Body>
           </Accordion.Item>

@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className='footer-container'>
-      <div className='d-flex flex-row align-items-start justify-content-between'>
+      <div className='footer-div'>
         <div className='footer-div1'>
         <Link to ="/"><h2>MED<span style={{ color: '#ffffff' }}>FIND</span></h2></Link>
         <p>Bringing Healthcare Closer to You. Discover and explore nearby health centers across all categories, and contribute by adding new hospitals to our growing community.</p>
