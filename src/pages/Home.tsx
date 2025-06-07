@@ -13,7 +13,7 @@ const Home: React.FC = () => {
         <div id='hero'>
           <div className='hero-1'>
             <h1>Looking for Hospitals or Health Centers in your area?</h1>
-            <p>We provide you access and visibility to a whole list of medical centers around you. You can join our ever-growing community by contributing to our list. <Link to='/about' style={{ color: '#198754' }}>Learn more about us</Link></p>
+            <p>We provide you access and visibility to a whole list of medical centers across Nigeria. You can join our ever-growing community by contributing to our list. <Link to='/about' style={{ color: '#198754' }}>Learn more about us</Link></p>
             <Link to="/signup"><button className='hero-btn'>Get Started</button></Link>
           </div>
           <div className='hero-2'>

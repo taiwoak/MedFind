@@ -8,7 +8,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import SignOutButton from './SignOutButton';
 import { FaBars, FaXmark } from 'react-icons/fa6';
 import { CiCircleInfo, CiHome, CiLogin, CiLogout, CiMail, CiSearch, CiUser } from "react-icons/ci";
-import { PiUserPlusThin } from "react-icons/pi";
+import { PiUserPlusThin, PiUsersThreeThin } from "react-icons/pi";
 import SignOut from './SignOut';
 
 
@@ -26,12 +26,15 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     if (menuOpen) {
       document.addEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = 'hidden';
     } else {
       document.removeEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = 'auto';
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = 'auto';
     };
   }, [menuOpen]);
 
@@ -84,6 +87,7 @@ const Navbar: React.FC = () => {
                   <Link to="/login" onClick={() => setMenuOpen(false)}><p className='menu-items'>{CiLogin({})}Login</p></Link>
                 </>
               )}
+              <Link to="/meet-the-team" onClick={() => setMenuOpen(false)}><p className='menu-items'>{PiUsersThreeThin({})}Meet the Team</p></Link>
             </div>
             <div id='close-menu'>
               <p className="close-icon" onClick={() => setMenuOpen(false)}>{FaXmark({})}</p>

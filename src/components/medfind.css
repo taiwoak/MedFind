@@ -113,23 +113,24 @@ body {
         height: 100%;
         z-index: 99;
         background-color: #344e41;
+        overflow-y: auto;
     }
 
     #mobile-menu {
-        padding: 32px;
+        padding: 48px 32px 32px;
     }
 
     .mobile-menu-items {
-        gap: 8px;
+        gap: 12px;
     }
 
     #mobile-menu h3{
-        font-size: 24px;
-        padding-bottom: 24px;
+        font-size: 32px;
+        padding-bottom: 32px;
     }
 
     #mobile-menu p {
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .menu-items {
@@ -147,9 +148,9 @@ body {
     }
 
     #close-menu p {
-        font-size: 24px;
+        font-size: 32px;
         cursor: pointer;
-        padding-top: 24px;
+        padding-top: 48px;
         padding-right: 32px;
     }
 }
@@ -362,6 +363,7 @@ body {
 
     .footer-container {
         padding: 32px;
+        margin-bottom: -4px;
     }
 
     .footer-div {
