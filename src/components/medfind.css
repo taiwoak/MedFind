@@ -442,9 +442,17 @@ body {
         padding: 24px;
     }
 
+    .search-div1 p {
+        padding: 0px 0px 20px;
+    }
+
     .input-search {
         flex-direction: column;
         gap: 24px;
+    }
+
+    .search-btn {
+        border-radius: 20px;
     }
 
     .custom-dropdown-menu {

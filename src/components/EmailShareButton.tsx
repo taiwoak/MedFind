@@ -28,7 +28,10 @@ const EmailShareButton: React.FC<{ results: HealthCenter[] }> = ({ results }) =>
   };
 
   return (
-    <button onClick={handleClick} className="btn-function">
+    <button onClick={handleClick} className="btn-function" style={{
+    backgroundColor: buttonText === 'Sending...' ? '#344e41' : '',
+    color: buttonText === 'Sending...' ? '#ffffff' : '',
+  }}>
       {buttonText}
     </button>
   );
