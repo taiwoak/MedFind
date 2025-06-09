@@ -93,8 +93,7 @@ const SearchHealthCenters: React.FC = () => {
         <h1>Find the Best Health Centers for Your Needs</h1>
         <p>Discover and explore health facilities across Nigeria with ease. Search by name, category, or state to find the best healthcare options available to you.</p>
       </div>
-
-      <div className='d-flex flex-row align-items-center justify-content-around' id='search-div2'>
+      <div id='search-div2'>
         <Dropdown>
           <Dropdown.Toggle variant="success" className='search-div3'>State</Dropdown.Toggle>
           <Dropdown.Menu className="custom-dropdown-menu">
@@ -113,7 +112,7 @@ const SearchHealthCenters: React.FC = () => {
           </Dropdown.Menu>
         </Dropdown>
 
-        <div className='d-flex flex-row input-search'>
+        <div className='input-search'>
           <input
             type="text"
             placeholder="Search by Name"

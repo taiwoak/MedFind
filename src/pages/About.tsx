@@ -15,7 +15,7 @@ const About: React.FC = () => {
         <h3>Why MedFind?</h3>
         <p>At MedFind, we believe that healthcare should be accessible to everyone. Our platform not only allows you to locate health centers based on your specific needs but also categorizes them so you can find exactly what you're looking for, whether it's a general hospital, a specialist clinic, or a community health center.</p>
       </div>
-      <div className='d-flex flex-row align-items-center justify-content-center div-about3'>
+      <div className='div-about3'>
         <div className='div-about3a'>
           <img src={choice} alt="Hospital Choice" className='about-img' />
           <h3>Your Health, Your Choice</h3>

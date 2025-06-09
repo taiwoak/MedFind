@@ -126,11 +126,11 @@ body {
 
     #mobile-menu h3{
         font-size: 32px;
-        padding-bottom: 32px;
+        padding-bottom: 24px;
     }
 
     #mobile-menu p {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .menu-items {
@@ -163,7 +163,6 @@ body {
 .search-div1 h1 {
     font-weight: 600;
     font-size: 52px;
-    line-height: 44px;
     letter-spacing: -0.02em;
     color: #101828;
     text-align: center;
@@ -182,6 +181,10 @@ body {
 }
 
 #search-div2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     margin-bottom: 36px;
 }
 
@@ -231,6 +234,8 @@ body {
 }
 
 .input-search {
+    display: flex;
+    flex-direction: row;
     gap: 8px;
 }
 
@@ -316,6 +321,173 @@ body {
     margin-bottom: 30px;
 }
 
+/*Responsive Styling*/
+@media screen and (min-width: 1120px) and (max-width: 1239px) {
+
+    .hc-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 20px;
+    }
+
+    .hc-card h3 {
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    }
+
+    .hc-card p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1119px) {
+
+    .search-div1 h1 {
+        font-size: 36px;
+        padding: 24px 0px;
+    }
+
+    .search-div1 p {
+        font-size: 20px;
+        line-height: 24px;
+        padding: 0px 20px 20px;
+    }
+
+    .search-div2 {
+        width: 100%;
+        padding: 0px 24px;
+    }
+
+    .search-div3 {
+        width: 140px;
+    }
+    
+    .search-div4 {
+        width: 160px;
+    }
+
+    .search-input {
+        width: 250px;
+    }
+
+    .search-btn {
+        width: 100px;
+    }
+
+    .custom-dropdown-menu {
+        max-height: 200px; 
+        overflow-y: auto;
+    }
+
+    .hc-container {
+        max-width: 100%;
+        margin: 0 auto;
+        gap: 20px;
+        padding: 32px;
+    }
+
+    .hc-card {
+        width: calc(33.33% - 20px);
+        height: 300px;
+        border: 1px solid #198754;
+        border-radius: 15px;
+        padding: 24px 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .search-div1 h1 {
+        font-size: 24px;
+        padding: 16px 0px;
+    }
+
+    .search-div1 p {
+        font-size: 18px;
+        line-height: 22px;
+        padding: 0px 20px 20px;
+    }
+
+    #search-div2 {
+        width: 100%;
+        padding: 0px 24px;
+    }
+
+    .search-div3, .search-div4, .search-input {
+        width: 100%;
+    }
+
+    .search-btn {
+        width: 70%;
+    }
+
+    .hc-container {
+        max-width: 100%;
+        margin: 0 auto;
+        gap: 20px;
+        padding: 32px;
+    }
+
+    .hc-card {
+        width: calc(50% - 20px);
+        height: 300px;
+        border: 1px solid #198754;
+        border-radius: 15px;
+        padding: 24px 12px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .input-search {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .custom-dropdown-menu {
+        width: 300px;
+    }
+
+    #search-div2 {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        gap: 24px;
+    }
+
+    .search-div3, .search-div4 {
+        width: 300px;
+    }
+
+    .search-input, .search-btn {
+        width: 300px;
+    }
+
+    .hc-container {
+        padding: 16px;
+    }
+
+    .hc-card {
+        width: calc(50% - 10px);
+        height: 250px;
+        padding: 12px;
+    }
+
+    .hc-card h3 {
+        font-size: 20px;
+        letter-spacing: -0.02em;
+    }
+
+    .hc-card p {
+        font-size: 14px;
+    }
+
+    .page button, .page p, .btn-function {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
 /* Footer */
 
 .footer-container {
@@ -363,7 +535,6 @@ body {
 
     .footer-container {
         padding: 32px;
-        margin-bottom: -4px;
     }
 
     .footer-div {
@@ -379,6 +550,14 @@ body {
 
     .footer-div1 h2 {
         font-size: 24px;
+    }
+
+    .footer-div2 h3, .footer-div3 h3 {
+        font-size: 20px;
+    }
+
+    .footer-div1 p, .footer-div2 p, .footer-div3 p, .footer-div4 p {
+        font-size: 14px;
     }
 
     .footer-div4 {
@@ -431,6 +610,28 @@ body {
     padding-bottom: 30px;
 }
 
+@media screen and (max-width: 576px) {
+
+    #sign-up form {
+        width: 100%;
+    }
+
+    #sign-up input, #sign-up select, #sign-up textarea, #sign-up button {
+        width: 100%;
+    }
+
+    #sign-up h3 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    #sign-up p {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+}
+
 /* About Us*/
 
 .div-about1 {
@@ -469,7 +670,6 @@ body {
     padding: 50px 120px 50px; 
 }
 
-
 .div-about2 h3,  .div-about4 h3 {
     font-weight: 600;
     font-size: 30px;
@@ -483,6 +683,13 @@ body {
     font-size: 18px;
     color: #344e41;
     text-align: center;
+}
+
+.div-about3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .div-about3a {
@@ -536,6 +743,82 @@ body {
     font-size: 18px;
     color: #fefae0;
     text-align: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1122px) {
+
+    .div-about1 {
+        height: 100%;
+    }
+
+    .div-about1 h1 {
+        font-size: 48px;
+        line-height: 72px;
+        padding-top: 110px;
+    }
+
+    .div-about1 p {
+        font-size: 24px;
+        line-height: 32px; 
+        padding: 70px;
+    }
+
+    .div-about3a h3, .div-about3b h3, .div-about4 h3 {
+        font-size: 24px;
+    }
+
+    .div-about3a p, .div-about3b p, .div-about4 p {
+        font-size: 16px;
+        line-height: 22px
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .div-about1 {
+        height: 100%;
+    }
+
+    .div-about1 h1 {
+        font-size: 32px;
+        line-height: 36px;
+        padding-top: 32px;
+    }
+
+    .div-about1 p {
+        font-size: 20px;
+        line-height: 24px; 
+        padding: 16px 32px 32px;
+    }
+
+    .div-about3 {
+        flex-direction: column;
+    }
+
+    .div-about3a, .div-about3b {
+        width: 100%;
+        height: auto;
+        padding: 32px;
+    }
+
+    
+    .div-about3a h3, .div-about3b h3, .div-about4 h3, .div-about2 h3 {
+        font-size: 20px;
+    }
+
+    .div-about3a p, .div-about3b p, .div-about4 p, .div-about2 p {
+        font-size: 14px;
+        line-height: 18px
+    }
+
+    .div-about2 {
+        padding: 32px; 
+    }
+
+    .div-about4 {
+        padding: 32px; 
+    }
 }
 
 /* Home Page*/
@@ -738,10 +1021,9 @@ body {
         width: 100%;
     }
 
-
     .hero-1 h1 {
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 24px;
+        line-height: 28px;
         letter-spacing: -0.02em;
         color: #101828;
         padding-bottom: 16px;
@@ -749,7 +1031,7 @@ body {
 
     .hero-1 p {
         font-size: 14px;
-        line-height: 16px;
+        line-height: 18px;
         padding-bottom: 16px;
     }
 
@@ -774,7 +1056,7 @@ body {
     .div-home3a, .div-home3b {
         width: 100%;
         height: auto;
-        padding: 16px;
+        padding: 24px 20px;
     }
 
     .search-img {
@@ -798,7 +1080,6 @@ body {
         width: 120px;
         height: 40px;
         font-size: 14px;
-        margin-bottom: 8px;
     }
 
 }
@@ -843,21 +1124,84 @@ body {
     border-radius: 25px;
 }
 
-/*Responsive Styling*/
-@media screen and (max-width: 1239px) {
+@media screen and (min-width: 768px) and (max-width: 1076px) {
 
-    .hc-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    gap: 20px;
+    #hero {
+        width: 100%;
+        height: auto;
+        padding: 50px 50px;
+        gap: 50px;
     }
 
-    .hc-card h3 {
-    font-size: 24px;
-    letter-spacing: -0.02em;
+    .team-1 h1 {
+        font-size: 32px;
+        line-height: 36px;
+        padding-bottom: 20px;
     }
 
-    .hc-card p {
+    .team-1 p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .team-1, .team-2 {
+        width: 50%;
+    }
+
+    .media {
+        gap: 10px;
+    }
+
+    .media p {
+        font-size: 16px;
+    }
+
+    .taiwo-img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    #hero {
+        width: 100%;
+        height: auto;
+        padding: 32px;
+        gap: 16px;
+    }
+
+    .team-1 h1 {
+        font-size: 24px;
+        line-height: 28px;
+        padding-bottom: 20px;
+    }
+
+    .team-1 p {
         font-size: 14px;
+        line-height: 18px;
+    }
+
+    .team-1, .team-2 {
+        width: 100%;
+    }
+
+    .media {
+        gap: 8px;
+    }
+
+    .media p {
+        font-size: 14px;
+    }
+
+    .taiwo-img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .taiwo-img {
+        width: 50%;
     }
 }
