@@ -9,12 +9,21 @@ interface HealthCenter {
 
 export const sendEmail = async (
   results: HealthCenter[],
-  subject: string = 'Health Center Search Results'
+  subject: string = 'Health Center Search Results',
+  onSuccess?: () => void,
+  onError?: () => void
 ) => {
   const user = getAuth().currentUser;
 
   if (!user || !user.email) {
     alert('You must be logged in to send email.');
+    onError?.();
+    return;
+  }
+
+  if (!results || results.length === 0) {
+    alert('You can not share empty results via Email');
+    onError?.();
     return;
   }
 
@@ -29,10 +38,6 @@ export const sendEmail = async (
   `;
 }).join('');
 
-if (!results || results.length === 0) {
-  alert('You can not share empty results via Email');
-  return;
-}
 
 const message = `
   <p>Here are your search results for health centers:</p>
@@ -72,10 +77,12 @@ const message = `
     )
     .then(() => {
       alert('Email sent successfully!');
+      onSuccess?.();
     })
     .catch((error) => {
       console.error('Email send failed:', error);
       alert('The email could not be sent because the results are too large.\n' +
     'If your search result spans more than 10 pages, kindly use the "Export to CSV" option instead.');
+     onError?.();
     });
 };

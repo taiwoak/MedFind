@@ -157,7 +157,7 @@ body {
 /* Search Page Styling */
 
 .search-div1 {
-    padding: 30px 0px;
+    padding: 30px 24px;
 }
 
 .search-div1 h1 {
@@ -437,6 +437,10 @@ body {
 }
 
 @media screen and (max-width: 575px) {
+ 
+    .search-div1 {
+        padding: 24px;
+    }
 
     .input-search {
         flex-direction: column;

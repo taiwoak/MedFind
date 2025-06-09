@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { sendEmail } from '../utils/sendEmail';
 import './medfind.css';
 
@@ -9,13 +9,27 @@ interface HealthCenter {
 }
 
 const EmailShareButton: React.FC<{ results: HealthCenter[] }> = ({ results }) => {
+  const [buttonText, setButtonText] = useState('Share via Email');
+
   const handleClick = () => {
-    sendEmail(results);
+    setButtonText('Sending...');
+
+    sendEmail(
+      results,
+      'Health Center Search Results',
+      () => {
+        setButtonText('Sent');
+        setTimeout(() => setButtonText('Share via Email'), 3000);
+      },
+      () => {
+        setButtonText('Share via Email');
+      }
+    );
   };
 
   return (
     <button onClick={handleClick} className="btn-function">
-      Share via Email
+      {buttonText}
     </button>
   );
 };

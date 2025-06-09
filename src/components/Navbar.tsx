@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
               {user ? (
                 <>
                   <Link to="/profile" onClick={() => setMenuOpen(false)}><p className='menu-items'>{CiUser({})}Profile</p></Link>
-                  <p className='menu-items'>{CiLogout({})}<SignOut /></p>
+                  <p className='menu-items' onClick={() => setMenuOpen(false)}>{CiLogout({})}<SignOut /></p>
                 </>
               ) : (
                 <>
