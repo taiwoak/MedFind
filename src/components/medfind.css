@@ -321,7 +321,6 @@ body {
     margin-bottom: 30px;
 }
 
-/*Responsive Styling*/
 @media screen and (min-width: 1120px) and (max-width: 1239px) {
 
     .hc-container {
@@ -1050,7 +1049,6 @@ body {
         display: flex;
         flex-direction: column;
         padding-bottom: 24px;
-        margin-bottom: 24px;
     }
 
     .div-home3a, .div-home3b {
@@ -1172,14 +1170,14 @@ body {
     }
 
     .team-1 h1 {
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 28px;
+        line-height: 32px;
         padding-bottom: 20px;
     }
 
     .team-1 p {
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 18px;
+        line-height: 24px;
     }
 
     .team-1, .team-2 {
@@ -1191,11 +1189,11 @@ body {
     }
 
     .media p {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .taiwo-img {
-        width: 100%;
+        width: 80%;
         height: 100%;
     }
 }
