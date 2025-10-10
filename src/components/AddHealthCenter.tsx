@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { auth, firestore } from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { User } from 'firebase/auth';
+import { sendEmail } from '../utils/sendEmail';
 
 const AddHealthCenter: React.FC = () => {
   const [name, setName] = useState('');
@@ -58,6 +59,23 @@ const AddHealthCenter: React.FC = () => {
           createdBy: user.uid,
           createdAt: new Date()
         });
+
+        const subject = `${name} is Now Live on MedFind!`;
+        const message = `
+          <p>Hi Medfinder,</p>
+          <p>Thank you for contributing to MedFind by adding a new health center.</p>
+          <p>Your input helps make healthcare more accessible to everyone.</p>
+          <p><strong>Here are the details you provided:</strong></p>
+          <ul>
+            <li><strong>Health Center Name:</strong> ${name}</li>
+            <li><strong>Address:</strong> ${address}</li>
+            <li><strong>Category:</strong> ${category}</li>
+          </ul>
+          <p>We’re grateful for your support in helping other Medfinders discover quality healthcare options.</p>
+          <p>Best regards,<br>The MedFind Team</p>
+        `;
+
+        await sendEmail(subject, message);
 
         setName('');
         setAddress('');

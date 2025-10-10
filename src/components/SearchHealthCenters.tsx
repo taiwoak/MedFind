@@ -155,7 +155,7 @@ const SearchHealthCenters: React.FC = () => {
       )}
 
       <button onClick={handleExport} className='btn-function'>Export to CSV</button>
-      <EmailShareButton results={results} />
+      <EmailShareButton results={results} totalPages={totalPages}  />
       <LinkShareButton searchParams={{ searchName, category, state }} />
     </div>
   );

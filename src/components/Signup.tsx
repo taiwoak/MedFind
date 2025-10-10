@@ -17,12 +17,14 @@ const Signup: React.FC = () => {
     try {
       console.log('Attempting signup...');
       await createUserWithEmailAndPassword(auth, email, password);
-      console.log('Signup successful');
+      alert('Signup successful');
       navigate('/login'); // Redirect to Login page after successful signup
     } catch (error) {
       if (error instanceof Error) {
+        alert(`Signup failed: Email already exists or Invalid credentials. Please try again.`);
         console.error(error.message);
       } else {
+        alert('Signup failed: An unknown error occurred');
         console.error('An unknown error occurred');
       }
     }

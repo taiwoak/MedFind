@@ -16,12 +16,14 @@ const Login: React.FC = () => {
     try {
       console.log('Attempting login...');
       await signInWithEmailAndPassword(auth, email, password);
-      console.log('Login successful');
-      navigate('/profile'); // Redirect to Add Health Center page after login
+      alert('Login successful');
+      navigate('/'); // Redirect to Home page after login
     } catch (error) {
       if (error instanceof Error) {
+        alert(`Login failed: Invalid credentials. Please try again.`);
         console.error(error.message);
       } else {
+        alert('Login failed: An unknown error occurred');
         console.error('An unknown error occurred');
       }
     }
@@ -29,7 +31,7 @@ const Login: React.FC = () => {
 
   return (
     <div className='d-flex flex-column align-items-center justify-content-center' id='sign-up'>
-      <h3>Hi there 👋, Welcome back!</h3>
+      <h3>Hi Medfinder, Welcome back!</h3>
       <form onSubmit={handleSubmit}>
         <input
           type="email"

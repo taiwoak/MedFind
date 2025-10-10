@@ -1,60 +1,35 @@
 import emailjs from '@emailjs/browser';
 import { getAuth } from 'firebase/auth';
 
-interface HealthCenter {
-  name: string;
-  category: string;
-  address: string;
-}
-
+/**
+ * Send an email using EmailJS.
+ * @param subject - Email subject
+ * @param message - HTML message body
+ * @param onSuccess - Optional callback on success
+ * @param onError - Optional callback on failure
+ */
 export const sendEmail = async (
-  results: HealthCenter[],
-  subject: string = 'Health Center Search Results',
+  subject: string,
+  message: string,
   onSuccess?: () => void,
   onError?: () => void
 ) => {
   const user = getAuth().currentUser;
 
   if (!user || !user.email) {
-    alert('You must be logged in to send email.');
+    alert('You must be logged in to send an email.');
     onError?.();
     return;
   }
 
-  if (!results || results.length === 0) {
-    alert('You can not share empty results via Email');
-    onError?.();
+  const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+  const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+
+  if (!publicKey || !serviceId || !templateId) {
+    alert('Email service not configured correctly.');
     return;
   }
-
-  const tableRows = results.map((center, index) => {
-  return `
-    <tr>
-      <td>${index + 1}</td>
-      <td>${center.name}</td>
-      <td>${center.category}</td>
-      <td>${center.address}</td>
-    </tr>
-  `;
-}).join('');
-
-
-const message = `
-  <p>Here are your search results for health centers:</p>
-  <table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse;">
-    <thead>
-      <tr>
-        <th>S/N</th>
-        <th>Name</th>
-        <th>Category</th>
-        <th>Address</th>
-      </tr>
-    </thead>
-    <tbody>
-      ${tableRows}
-    </tbody>
-  </table>
-`;
 
   const templateParams = {
     subject,
@@ -62,27 +37,15 @@ const message = `
     email: user.email,
   };
 
-  const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
-  if (!publicKey) {
-    alert("Email service not configured");
-    return;
-  }
-
   emailjs
-    .send(
-      process.env.REACT_APP_EMAILJS_SERVICE_ID!,
-      process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
-      templateParams,
-      process.env.REACT_APP_EMAILJS_PUBLIC_KEY!
-    )
+    .send(serviceId, templateId, templateParams, publicKey)
     .then(() => {
       alert('Email sent successfully!');
       onSuccess?.();
     })
     .catch((error) => {
       console.error('Email send failed:', error);
-      alert('The email could not be sent because the results are too large.\n' +
-    'If your search result spans more than 10 pages, kindly use the "Export to CSV" option instead.');
-     onError?.();
+      alert('Failed to send email. Please try again later.');
+      onError?.();
     });
 };
